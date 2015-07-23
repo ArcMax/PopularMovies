@@ -37,62 +37,34 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button:
-                displayToast("Button to open Sportify Steamer App");
+                displayToast(this.getString(R.string.open_sportify));
                 break;
             case R.id.button2:
-                displayToast("Button to open Scores App");
+                displayToast(this.getString(R.string.open_scores));
                 break;
             case R.id.button3:
-                displayToast("Button to open Library App");
+                displayToast(this.getString(R.string.open_library));
                 break;
             case R.id.button4:
-                displayToast("Button to open Build It Bigger App");
+                displayToast(this.getString(R.string.open_bigger));
                 break;
             case R.id.button5:
-               displayToast("Button to open Bacon Reader App");
+               displayToast(this.getString(R.string.open_bacon));
                 break;
             case R.id.button6:
-                displayToast("Button to open Capstone App");
+                displayToast(this.getString(R.string.open_capstone));
                 break;
         }
 
     }
-
+    Toast toast;
     private void displayToast(String text) {
-        Toast toast = null;
-        if (toast != null)
+        if (toast != null) {
             toast.cancel();
-        else
+        }
             toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
-
-    private void cancleToast(String cancle) {
-        Toast.makeText(this, cancle, Toast.LENGTH_SHORT).cancel();
-    }
-
 }
