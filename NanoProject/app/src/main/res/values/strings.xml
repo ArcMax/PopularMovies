@@ -2,6 +2,7 @@
     <string name="app_name">My App Portfolio</string>
 
     <string name="my_apps">My Nanodegree Apps!</string>
+    <string name="action_settings">Settings</string>
 
     <!--Apps button-->
     <string name="sportify_steamer">SPOTIFY STEAMER</string>
@@ -11,7 +12,7 @@
     <string name="bacon_reader">BACON READER</string>
     <string name="capstone_my_own_app">CAPSTONE: MY OWN APP</string>
     
-    <!--button strings-->
+    <!--Button strings-->
     <string name="open_sportify">Button to open Sportify Steamer App</string>
     <string name="open_scores">Button to open Scores App</string>
     <string name="open_library">Button to open Library App</string>
