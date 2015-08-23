@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/switch_thumb_normal_material_light">
+
+    <TextView
+        android:id="@+id/movie_name"
+        android:layout_width="match_parent"
+        android:layout_height="114dp"
+        android:gravity="left|center"
+        android:paddingLeft="25dp"
+        android:paddingRight="15dp"
+        android:text="Large Text"
+        android:textSize="28sp"
+        android:background="#009688"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/movie_name"
+        android:background="#BDBDBD"/>
+
+
+    <include
+        android:id="@+id/ratings_layout"
+        layout="@layout/ratings_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/movie_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/movie_overview"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Medium Text"
+        style="@style/movieDetailStyle"
+        android:lines="3"
+        android:paddingLeft="25dp"
+        android:paddingRight="15dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/ratings_layout"
+        android:layout_alignRight="@+id/ratings_layout"
+        android:layout_alignEnd="@+id/ratings_layout"
+        android:layout_marginTop="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="15dp"
+        android:layout_below="@+id/movie_overview"
+        android:background="@android:color/darker_gray"/>
+</RelativeLayout>

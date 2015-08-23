@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2">
+
+    <ImageView
+        android:layout_weight="0.1"
+        android:id="@+id/movie_tumb"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:paddingTop="15dp" />
+
+    <LinearLayout
+        android:layout_weight="1.9"
+        android:layout_toRightOf="@+id/movie_tumb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView_year"
+            style="@style/movieDetailStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView_min"
+            style="@style/movieDetailStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120min"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView_ratings"
+            style="@style/movieDetailStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8.0/10"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button_markasfav"
+            android:layout_width="70dp"
+            android:background="#80CBC4"
+            style="@style/movieDetailStyle"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="MARK AS FAVORATE" />
+    </LinearLayout>
+</LinearLayout>
