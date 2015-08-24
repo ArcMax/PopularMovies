@@ -25,7 +25,6 @@
             style="@style/movieDetailStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2015"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <TextView
@@ -33,7 +32,6 @@
             style="@style/movieDetailStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="120min"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="italic" />
 
@@ -42,7 +40,6 @@
             style="@style/movieDetailStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="8.0/10"
             android:padding="5dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textStyle="bold" />
@@ -54,6 +51,6 @@
             style="@style/movieDetailStyle"
             android:layout_height="wrap_content"
             android:textSize="10sp"
-            android:text="MARK AS FAVORATE" />
+            android:text="@string/button_favorate" />
     </LinearLayout>
 </LinearLayout>

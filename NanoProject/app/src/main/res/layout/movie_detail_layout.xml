@@ -14,14 +14,14 @@
         android:paddingRight="15dp"
         android:text="Large Text"
         android:textSize="28sp"
-        android:background="#009688"
+        android:background="@color/App_green"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="3dp"
         android:layout_below="@+id/movie_name"
-        android:background="#BDBDBD"/>
+        android:background="@color/shadow_color"/>
 
 
     <include
@@ -39,7 +39,6 @@
         android:id="@+id/movie_overview"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:text="Medium Text"
         style="@style/movieDetailStyle"
         android:lines="3"
         android:paddingLeft="25dp"

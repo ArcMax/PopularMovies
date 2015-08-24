@@ -20,4 +20,11 @@
     <string name="open_bacon">Button to open Bacon Reader App</string>
     <string name="open_capstone">Button to open Capstone App</string>
 
+    <string name="top_movies">Top Movies</string>
+    <string name="pop_movies">Pop Movies</string>
+    <string name="button_favorate">MARK AS FAVORATE</string>
+
+    <string name="movies_api">http://api.themoviedb.org/3/discover/movie?</string>
+    <string name="top_movie_api">http://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc</string>
+
 </resources>

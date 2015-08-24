@@ -39,6 +39,8 @@ public class MovieListFragment extends Fragment implements AdapterView.OnItemCli
     private GridImageAdapter gridImageAdapter;
     ILoadMoveDetail loadMoveDetail;
 
+    private String YOUR_API_KEY = "api_key=Enter your API here";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,14 +63,14 @@ public class MovieListFragment extends Fragment implements AdapterView.OnItemCli
         if (view == null)
             view = inflater.inflate(R.layout.movielist_layout, null);
 
-        getActivity().getActionBar().setTitle("Pop Movies");
+        getActivity().getActionBar().setTitle(R.string.pop_movies);
         GridView gridView = (GridView) view.findViewById(R.id.movies_gridview);
 
         movieDataArrayList = new ArrayList<MovieData>();
         gridImageAdapter = new GridImageAdapter(getActivity(),R.layout.grid_item_layout,movieDataArrayList);
         gridView.setAdapter(gridImageAdapter);
 
-        new DownloadMovies().execute("http://api.themoviedb.org/3/discover/movie?api_key=ADD YOUR API KEY");
+        new DownloadMovies().execute(getActivity().getString(R.string.movies_api)+YOUR_API_KEY);
 
         gridView.setOnItemClickListener(this);
         return view;
@@ -85,12 +87,12 @@ public class MovieListFragment extends Fragment implements AdapterView.OnItemCli
             case R.id.popolar_movie:
                 movieDataArrayList.clear();
                 Log.e("tag to check arraylist", "tag to check arraylist pop movies" + movieDataArrayList.size());
-               new DownloadMovies().execute("http://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=ADD YOUR API KEY");
+               new DownloadMovies().execute(getActivity().getString(R.string.movies_api)+YOUR_API_KEY);
                 break;
             case R.id.highest_rated:
                 movieDataArrayList.clear();
-                getActivity().getActionBar().setTitle("Top Movies");
-                new DownloadMovies().execute("http://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&api_key=ADD YOUR API KEY");
+                getActivity().getActionBar().setTitle(R.string.top_movies);
+                new DownloadMovies().execute(getActivity().getString(R.string.top_movie_api)+"&"+YOUR_API_KEY);
                 break;
             default:
                 break;
