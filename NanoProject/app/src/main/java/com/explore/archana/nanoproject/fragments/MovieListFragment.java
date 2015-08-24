@@ -87,7 +87,7 @@ public class MovieListFragment extends Fragment implements AdapterView.OnItemCli
             case R.id.popolar_movie:
                 movieDataArrayList.clear();
                 Log.e("tag to check arraylist", "tag to check arraylist pop movies" + movieDataArrayList.size());
-               new DownloadMovies().execute(getActivity().getString(R.string.movies_api)+YOUR_API_KEY);
+               new DownloadMovies().execute(getActivity().getString(R.string.pop_movie_api)+"&"+YOUR_API_KEY);
                 break;
             case R.id.highest_rated:
                 movieDataArrayList.clear();
