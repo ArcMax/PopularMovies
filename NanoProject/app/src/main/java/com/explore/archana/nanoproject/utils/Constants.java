@@ -6,6 +6,6 @@ package com.explore.archana.nanoproject.utils;
 public class Constants {
 
     public static final String BASE_URL = "http://api.themoviedb.org";
-    public static final String API_KEY ="b328c17baa568313f3451892063ae2e3";
+    public static final String API_KEY ="Enter your API key";
 
 }

@@ -142,6 +142,7 @@ public class MovieDetailFragment extends Fragment implements OnClickListener {
             mMovieVote.setText(movieData.getVoteAverage() + "/10");
             mMovieTitle.setText(movieData.getTitle());
             mMovieOverview.setText(movieData.getOverview());
+            if(movieData.getFavorate()!=null)
             mMovieFavorate.setChecked(movieData.getFavorate());
             setTrailers();
             setReviews();
