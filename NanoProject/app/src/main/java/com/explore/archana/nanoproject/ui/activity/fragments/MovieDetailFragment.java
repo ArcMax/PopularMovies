@@ -221,7 +221,6 @@ public class MovieDetailFragment extends Fragment implements OnClickListener {
                     reviews = moviesReviews;
                     reviewAdapter = new MovieReviewAdapter(getActivity(), R.layout.list_item_review_layout, moviesReviews.getResults());
                     mReviewListView.setAdapter(reviewAdapter);
-                    Utility.setListViewHeightBasedOnChildren(mReviewListView);
                 }
 
                 @Override
@@ -233,7 +232,6 @@ public class MovieDetailFragment extends Fragment implements OnClickListener {
             MoviesReviews review = (MoviesReviews) new Gson().fromJson(mCursor.getString(mCursor.getColumnIndex(MoviesSQLiteOpenHelper.REVIEWS)), MoviesReviews.class);
             reviewAdapter = new MovieReviewAdapter(getActivity(), R.layout.list_item_review_layout, review.getResults());
             mReviewListView.setAdapter(reviewAdapter);
-            Utility.setListViewHeightBasedOnChildren(mReviewListView);
         }
 
     }
