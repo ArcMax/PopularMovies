@@ -1,4 +1,4 @@
-package com.explore.archana.nanoproject.adapter;
+package com.explore.archana.nanoproject.ui.activity.adapter;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,32 +10,26 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
 import com.explore.archana.nanoproject.R;
-import com.explore.archana.nanoproject.model.MovieData;
+import com.explore.archana.nanoproject.model.MovieResultsModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by archana on 8/13/2015.
  */
-public class GridImageAdapter extends ArrayAdapter<MovieData> {
+public class GridImageAdapter extends ArrayAdapter<MovieResultsModel> {
 
     private Context mContext;
     private int mLayoutResourceId;
-    private ArrayList<MovieData> movieDataArrayList = new ArrayList<MovieData>();
+    private List<MovieResultsModel> movieDataArrayList = new ArrayList<MovieResultsModel>();
 
-    public GridImageAdapter(Context context, int resource, ArrayList<MovieData> movieDatas) {
+    public GridImageAdapter(Context context, int resource, List<MovieResultsModel> movieDatas) {
         super(context, resource, movieDatas);
         this.mContext = context;
         this.mLayoutResourceId = resource;
         this.movieDataArrayList = movieDatas;
-        notifyDataSetChanged();
-    }
-
-    public void setGridData(ArrayList<MovieData> mGridData) {
-        Log.e("tag to check arraylist","tag to check arraylist setGridData"+movieDataArrayList.size());
-        this.movieDataArrayList = mGridData;
-        Log.e("tag to check arraylist", "tag to check arraylist setGridData addall" + movieDataArrayList.size());
         notifyDataSetChanged();
     }
 
@@ -54,10 +48,10 @@ public class GridImageAdapter extends ArrayAdapter<MovieData> {
             holder = (ViewHolder) row.getTag();
         }
 
-        MovieData data = movieDataArrayList.get(position);
-        Log.e("Movie Image", "Movie Image" + "http://image.tmdb.org/t/p/w185" + data.getMovieImage());
+        MovieResultsModel data = movieDataArrayList.get(position);
+        Log.e("Movie Image", "Movie Image" + "http://image.tmdb.org/t/p/w185" + data.getPosterPath());
         String imageUrl = "http://image.tmdb.org/t/p/w185";
-        Picasso.with(mContext).load(imageUrl+data.getMovieImage()).into(holder.imageView);
+        Picasso.with(mContext).load(imageUrl + data.getPosterPath()).into(holder.imageView);
 
         return row;
     }
@@ -68,7 +62,7 @@ public class GridImageAdapter extends ArrayAdapter<MovieData> {
     }
 
     @Override
-    public MovieData getItem(int position) {
+    public MovieResultsModel getItem(int position) {
         return movieDataArrayList.get(position);
     }
 

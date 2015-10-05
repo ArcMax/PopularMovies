@@ -1,61 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/switch_thumb_normal_material_light">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/movie_name"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="114dp"
-        android:gravity="left|center"
-        android:paddingLeft="25dp"
-        android:paddingRight="15dp"
-        android:text="Large Text"
-        android:textSize="28sp"
-        android:background="@color/App_green"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_height="match_parent"
+        android:background="@color/switch_thumb_normal_material_light"
+        android:orientation="vertical">
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="3dp"
-        android:layout_below="@+id/movie_name"
-        android:background="@color/shadow_color"/>
+        <TextView
+            android:id="@+id/movie_name"
+            android:layout_width="match_parent"
+            android:layout_height="114dp"
+            android:background="@color/App_green"
+            android:gravity="left|center"
+            android:paddingLeft="25dp"
+            android:paddingRight="15dp"
+            android:text="Large Text"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="28sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/movie_name"
+            android:background="@color/shadow_color" />
 
 
-    <include
-        android:id="@+id/ratings_layout"
-        layout="@layout/ratings_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/movie_name"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        <include
+            android:id="@+id/ratings_layout"
+            layout="@layout/ratings_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp" />
 
-    <TextView
-        android:id="@+id/movie_overview"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        style="@style/movieDetailStyle"
-        android:lines="3"
-        android:paddingLeft="25dp"
-        android:paddingRight="15dp"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_below="@+id/ratings_layout"
-        android:layout_alignRight="@+id/ratings_layout"
-        android:layout_alignEnd="@+id/ratings_layout"
-        android:layout_marginTop="28dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:id="@+id/movie_overview"
+            style="@style/movieDetailStyle"
+            android:layout_width="wrap_content"
+           android:layout_height="60dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="28dp"
+            android:lines="3"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="2dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="15dp"
-        android:layout_below="@+id/movie_overview"
-        android:background="@android:color/darker_gray"/>
-</RelativeLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Trailers"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"/>
+
+        <ListView
+            android:id="@+id/listview_trailers_moviedetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"></ListView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:text="Reviews"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"/>
+
+        <ListView
+            android:id="@+id/listview_reviews_moviedetail"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"></ListView>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="15dp"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
+</ScrollView>

@@ -1,4 +1,4 @@
-package com.explore.archana.nanoproject.activity;
+package com.explore.archana.nanoproject.ui.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,8 +6,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -84,5 +83,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
             toast.cancel();
         }
         toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Log.d("OnBackPressed","pressed");
     }
 }

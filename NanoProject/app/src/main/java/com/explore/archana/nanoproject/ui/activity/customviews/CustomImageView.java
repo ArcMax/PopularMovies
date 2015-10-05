@@ -1,4 +1,4 @@
-package com.explore.archana.nanoproject.customviews;
+package com.explore.archana.nanoproject.ui.activity.customviews;
 
 import android.content.Context;
 import android.util.AttributeSet;
